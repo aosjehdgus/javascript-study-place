@@ -11,14 +11,22 @@ class Person{
 } 
 
 class PersonPlus extends Person{
-    avg(){
-        return (this.first + this.second) / 2;
+    constructor(name, first, second, third){
+        super(name, first, second);
+        this.third = third;
     }
 
-} 
+    sum(){
+        return super.sum() + this.third;
+}
+    avg(){
+        return (this.first + this.second + this.third) / 3;
+    }
+
+}
 
 
-var dongle = new PersonPlus('dongle', 10, 20);
+var dongle = new PersonPlus('dongle', 10, 20, 30);
 console.log(dongle.sum());
 console.log(dongle.avg());
 
