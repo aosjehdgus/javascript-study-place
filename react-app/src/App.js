@@ -5,22 +5,29 @@ import Head from './components/Head';
 import Contents from './components/Contents';
 
 class App extends Component{
+  constructor(props){
+    super(props);
+    this.state = {
+
+      head:{title: 'React', sub : 'For UI'}
+
+    }
+    }
   render(){
     return (
       <div className="App">
-        <Head title="WEB" sub = "world wide web!"> </Head>
-        <Head title="React" sub = "For UI"> </Head>
-        <TOC> </TOC>
-        <Contents title = "HTML" desc = "HTML is HyperText Markup Language."></Contents>
-        <Contents title = "CSS" desc = "CSS is Cascading Style Sheets."></Contents>
-        <Contents title = "JS" desc = "JS is Javascripts."></Contents>
-     
+        <Head title = {this.state.head.title} 
+              sub = {this.state.head.sub}> 
+        </Head>
       </div>
     );
   }
 }
 
 export default App;
+
+ {/* <TOC> </TOC>
+        <Contents title = "HTML" desc = "HTML is HyperText Markup Language."></Contents> */}
 
 // class Example_props extends Component{
 //   render(){
@@ -66,3 +73,4 @@ export default App;
 //   );
 // }
 
+  
