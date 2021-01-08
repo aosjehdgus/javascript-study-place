@@ -9,7 +9,12 @@ class App extends Component{
     super(props);
     this.state = {
 
-      head:{title: 'React', sub : 'For UI'}
+      head:{title: 'React', sub : 'For UI'},
+      contents:[
+        {id:1, title:'concept', desc:'1'},
+        {id:2, title:'example', desc:'2'},
+        {id:3, title:'difference', desc:'3'},
+      ]
 
     }
     }
@@ -19,6 +24,7 @@ class App extends Component{
         <Head title = {this.state.head.title} 
               sub = {this.state.head.sub}> 
         </Head>
+        <TOC data = {this.state.contents}></TOC>
       </div>
     );
   }
