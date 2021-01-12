@@ -11,13 +11,16 @@ class App extends Component{
 
       head:{title: 'React', sub : 'For UI'},
       contents:[
-        {id:1, title:'concept', desc:'1'},
-        {id:2, title:'example', desc:'2'},
-        {id:3, title:'difference', desc:'3'},
-      ]
 
+        {id : 1, title : 'Name', desc : 'Name is react'},
+        {id : 2, title : 'Example', desc : 'Example is react example'},
+        {id : 3, title : 'Difference', desc : 'Difference is react difference'}
+
+       
+      ]
+      
     }
-    }
+  }
   render(){
     return (
       <div className="App">
@@ -32,8 +35,10 @@ class App extends Component{
 
 export default App;
 
- {/* <TOC> </TOC>
-        <Contents title = "HTML" desc = "HTML is HyperText Markup Language."></Contents> */}
+
+
+ /* <TOC> </TOC>
+<Contents title = "HTML" desc = "HTML is HyperText Markup Language."></Contents> */
 
 // class Example_props extends Component{
 //   render(){
