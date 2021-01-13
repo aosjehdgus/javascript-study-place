@@ -2,22 +2,28 @@ import React, { Component } from 'react';
 import './App.css';
 import TOC from './components/TOC';
 import Head from './components/Head';
-import Contents from './components/Contents';
+import Profile from './components/Subject';
 
 class App extends Component{
   constructor(props){
     super(props);
     this.state = {
 
-      head:{title: 'React', sub : 'For UI'},
+      head:{title: "dongle's portfolio"},
       contents:[
 
-        {id : 1, title : 'Name', desc : 'Name is react'},
-        {id : 2, title : 'Example', desc : 'Example is react example'},
-        {id : 3, title : 'Difference', desc : 'Difference is react difference'}
+        {id : 1, title : 'PROFILE', desc : 'Name is react'},
+        {id : 2, title : 'PROJECT', desc : 'Example is react example'},
+        {id : 3, title : 'ACTIVITY', desc : 'Difference is react difference'},
+        {id : 4, title : 'VISION', desc : 'Difference is react difference'}
 
        
-      ]
+      ],
+
+      subject:{title: "Profile",
+               desc : "긍정적 재료로 소통하는 긍정 개발자 '안녕하세요. 저는 재료공학 출신 개발자 입니다.' "}
+               
+
       
     }
   }
@@ -28,6 +34,11 @@ class App extends Component{
               sub = {this.state.head.sub}> 
         </Head>
         <TOC data = {this.state.contents}></TOC>
+
+        <Profile title = {this.state.subject.title}
+                desc = {this.state.subject.desc}>        
+        </Profile>                             
+
       </div>
     );
   }
