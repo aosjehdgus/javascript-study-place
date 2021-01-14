@@ -9,7 +9,7 @@ class App extends Component{
     super(props);
     this.state = {
 
-      head:{title: "dongle's portfolio"},
+      head:{title: "dongle's", sub : "portfolio"},
       contents:[
 
         {id : 1, title : 'PROFILE', desc : 'Name is react'},
