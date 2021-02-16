@@ -2,42 +2,70 @@ import React, { Component } from 'react';
 import './App.css';
 import TOC from './components/TOC';
 import Head from './components/Head';
-import Profile from './components/Subject';
+import Subject from './components/Subject';
+
 
 class App extends Component{
   constructor(props){
     super(props);
     this.state = {
-
+      mode:'read',
       head:{title: "dongle's", sub : "portfolio"},
+      welcome:{title:'welcome', desc : 'Hello, React!!!'},
       contents:[
 
-        {id : 1, title : 'PROFILE', desc : 'Name is react'},
-        {id : 2, title : 'PROJECT', desc : 'Example is react example'},
-        {id : 3, title : 'ACTIVITY', desc : 'Difference is react difference'},
-        {id : 4, title : 'VISION', desc : 'Difference is react difference'}
+        {id : 1, title : 'Introduce', desc : 'Introduce is react'},
+        {id : 2, title : 'Competency', desc : 'Competency is react example'},
+        {id : 3, title : 'Skill', desc : 'Skill is react difference'},
+        {id : 4, title : 'Project', desc : 'Project is react difference'},
+        {id : 5, title : 'Activity', desc : 'ctivity is react difference'},
+        {id : 6, title : 'Value', desc : 'alu is react difference'},
 
        
-      ],
-
-      subject:{title: "Profile",
-               desc : "긍정적 재료로 소통하는 긍정 개발자 '안녕하세요. 저는 재료공학 출신 개발자 입니다.' "}
-               
-
+      ],                       
       
     }
   }
   render(){
+    var _title, _desc = null;
+    if(this.state.mode === 'welcome'){
+
+      _title = this.state.welcome.title;
+      _desc = this.state.welcome.desc;
+    }
+
+    else if(this.state.mode === 'read'){
+
+      _title = this.state.contents[0].title;
+      _title = this.state.contents[0].desc;
+
+    }
+
     return (
       <div className="App">
-        <Head title = {this.state.head.title} 
-              sub = {this.state.head.sub}> 
-        </Head>
-        <TOC data = {this.state.contents}></TOC>
 
-        <Profile title = {this.state.subject.title}
-                desc = {this.state.subject.desc}>        
-        </Profile>                             
+        {/* <Head title = {this.state.head.title} 
+              sub = {this.state.head.sub}> 
+        </Head> */}
+
+        <header>
+
+          <h1 className = "main_title"><a href="/" onClick={function(e){
+            console.log(e);
+            e.preventDefault();
+            
+            this.setState({
+              mode : 'welcome'
+            });
+
+          }.bind(this)}> {this.state.head.title} </a> 
+          
+          </h1>
+          <h1 className = "sub_title"><a href="/"> {this.state.head.sub} </a></h1>
+
+        </header>
+        <TOC data = {this.state.contents}></TOC>
+        <Subject title = {_title} desc = {_desc}></Subject>                      
 
       </div>
     );
@@ -95,4 +123,3 @@ export default App;
 //   );
 // }
 
-  
