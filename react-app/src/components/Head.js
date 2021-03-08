@@ -7,8 +7,8 @@ class Head extends Component{
   
         <header>
 
-          <h1 className = "main_title"> {this.props.title} </h1>
-          <h1 className = "sub_title"> {this.props.sub} </h1>
+          <h1 className = "main_title"><a href="/"> {this.props.title}</a> </h1>
+          <h1 className = "sub_title"><a href="/"> {this.props.sub} </a></h1>
     
         </header>
   

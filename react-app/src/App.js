@@ -9,7 +9,7 @@ class App extends Component{
   constructor(props){
     super(props);
     this.state = {
-      mode:'read',
+      mode:'welcome',
       head:{title: "dongle's", sub : "portfolio"},
       welcome:{title:'welcome', desc : 'Hello, React!!!'},
       contents:[
@@ -51,19 +51,21 @@ class App extends Component{
         <header>
 
           <h1 className = "main_title"><a href="/" onClick={function(e){
+            				
             console.log(e);
             e.preventDefault();
             
-            this.setState({
-              mode : 'welcome'
-            });
+            // this.setState({
+            //   mode : 'welcome'
+            // });
 
-          }.bind(this)}> {this.state.head.title} </a> 
-          
+          }}> {this.state.head.title} </a> 
+{/* .bind(this) */}
           </h1>
           <h1 className = "sub_title"><a href="/"> {this.state.head.sub} </a></h1>
 
         </header>
+        
         <TOC data = {this.state.contents}></TOC>
         <Subject title = {_title} desc = {_desc}></Subject>                      
 

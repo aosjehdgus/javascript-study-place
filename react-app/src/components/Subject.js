@@ -1,18 +1,20 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 class Subject extends Component{
     render(){
-        return(
+      return(
+  
+        <section>
 
-            <div>
-                <h1>{this.props.title}</h1>
-                <h5>{this.props.desc}</h5>
-                    
+          <h2>{this.props.title}</h2>
 
-            </div>
+          <p> {this.props.desc}</p>
 
-        );
+        </section>
+  
+      );
     }
-}
+  }
 
 export default Subject;
+  
