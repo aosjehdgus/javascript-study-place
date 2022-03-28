@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=cylinder&color=auto&height=150&section=header&text=React%20Study&animation=fadeIn&fontSize=30)
+![header](https://capsule-render.vercel.app/api?type=cylinder&color=auto&height=150&section=header&text=Javascript%20Study&animation=fadeIn&fontSize=30)
 ---
 <h3> Description </h3>
 
