@@ -2,7 +2,8 @@
 
  하나의 값을 저장하기 위해 확보한 메모리 공간 자체 또는 그 메모리 공간을 식별하기 위해 붙혀진 이름을 말한다. 즉, 변수란 값의 위치를 가리키는 상징적인 이름을 말한다. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c33833ee-823d-42ae-a681-16f4c070accd/Untitled.png)
+<img width="348" alt="image" src="https://user-images.githubusercontent.com/66933768/160747054-f675a286-356f-4e3a-883d-6ddb7f44f596.png">
+
 
 ```jsx
 var foo = 135; 
@@ -41,8 +42,7 @@ console.log(foo); // ③ 246
 - 초기화 단계(Initialization Phase) :  변수 객체에 등록된 변수를 위한 메모리 공간을 확보한다. 이 단계에서 변수는 undefined로 초기화 된다.
 - 할당 단계(Assignment Phase) :  undefined로 초기화된 변수에 실제 값을 할당한다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/14a0b5a6-9746-4c36-936b-4d1b803414f8/Untitled.png)
-
+<img width="461" alt="image" src="https://user-images.githubusercontent.com/66933768/160747111-f6d6d3e4-ba4c-44c1-a86f-e08a8c8cf61c.png">
  var 키워드로 선언된 변수는 선언 단계와 초기화 단계가 한번에 이루어진다. 즉, 스코프에 변수가 등록되고 변수는 메모리에 공간을 확보한 후 undefined로 초기화 된다.  
 
 ```jsx
