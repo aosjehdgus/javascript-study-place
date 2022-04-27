@@ -2,7 +2,7 @@
 ---
 <h3> Description </h3>
 
-<p> 이 저장소는 javascript 관련 공부 내용을 담고 있습니다.</p>
+<p> 이 저장소는 Javascript 관련 공부 내용을 담고 있습니다.</p>
 
 <h3> Study Rule </h3>
 
